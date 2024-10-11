@@ -1,6 +1,8 @@
 services:
     webserver:
         restart: on-failure
+        env_file:
+          - .env
         image: "webserver:${VERSION}"
         build:
           context: ./
