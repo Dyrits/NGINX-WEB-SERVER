@@ -1,0 +1,9 @@
+services:
+    webserver:
+        restart: on-failure
+        image: "webserver:${VERSION}"
+        build:
+          context: ./
+          dockerfile: Dockerfile
+        ports:
+            - "80:80"
